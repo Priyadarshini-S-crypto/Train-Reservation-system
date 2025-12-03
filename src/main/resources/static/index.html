@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Train Booking Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><rect width='28' height='28' rx='6' fill='%230b79d0'/></svg>" alt="">
+      <h1>Railway Portal</h1>
+    </div>
+    <nav>
+      <a href="#book">Book</a>
+      <a href="#status">Status</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="hero" class="card hero">
+      <div>
+        <h2>Book your seat in seconds</h2>
+        <p>Fast, reliable booking — see availability and manage tickets instantly.</p>
+      </div>
+      <img alt="train" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='120'><rect width='220' height='120' rx='12' fill='%23eaf6ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%230b79d0' font-size='18'>TRAIN IMAGE</text></svg>">
+    </section>
+
+    <section id="book" class="grid">
+      <div class="card">
+        <h3>Book Ticket</h3>
+        <label>Name <input id="name" placeholder="Full name" /></label>
+        <label>Age <input id="age" type="number" placeholder="Age" /></label>
+        <label>Berth Preference
+          <select id="berth">
+            <option value="L">Lower</option>
+            <option value="M">Middle</option>
+            <option value="U">Upper</option>
+          </select>
+        </label>
+        <div class="actions">
+          <button id="bookBtn" class="primary">Book Now</button>
+          <button id="quickL">Quick Lower</button>
+        </div>
+        <p class="info" id="bookInfo"></p>
+      </div>
+
+      <div class="card">
+        <h3>Cancel Ticket</h3>
+        <label>Passenger ID <input id="cancelId" placeholder="Enter passenger id" /></label>
+        <div class="actions">
+          <button id="cancelBtn" class="danger">Cancel</button>
+        </div>
+        <p class="info" id="cancelInfo"></p>
+      </div>
+    </section>
+
+    <section id="status" class="card">
+      <h3>Availability</h3>
+      <div class="statusRow" id="availRow">
+        <!-- filled by JS -->
+      </div>
+
+      <h3>Booked Passengers</h3>
+      <div id="bookedList" class="list"></div>
+
+      <div class="actions mt">
+        <button id="refreshBtn">Refresh</button>
+        <input id="searchId" placeholder="Search by passenger id" />
+        <button id="searchBtn">Search</button>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h3>About</h3>
+      <p>This demo uses your Java Spring Boot backend. The site is served by Spring Boot's static resources. To deploy, follow the steps below.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>&copy; Railway Portal • Demo</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
