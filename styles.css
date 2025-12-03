@@ -1,0 +1,9 @@
+
+body{font-family:Arial,Helvetica,sans-serif;background:#f0f4f8;margin:0;padding:20px}
+.container{max-width:900px;margin:0 auto}
+h1{text-align:center}
+.card{background:white;padding:16px;border-radius:8px;margin:12px 0;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+.card input, .card select{padding:8px;margin:6px 4px;width:calc(33% - 18px)}
+.card button{padding:8px 12px;margin-left:6px;background:#0b79d0;color:white;border:none;border-radius:6px;cursor:pointer}
+.card.small{display:inline-block;width:48%}
+#booked{max-height:220px;overflow:auto;background:#fafafa;padding:8px;border-radius:6px}
